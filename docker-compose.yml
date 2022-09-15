@@ -1,0 +1,14 @@
+version: '3.9'
+services:
+  vue:
+    build: ./vue3-app-image
+    image: vue3-app-image
+    pull_policy: never
+    container_name: vue3-app
+    volumes:
+      - 'vue3-app-volume:/app'
+    ports:
+      - '8080:8080'
+    
+volumes:
+  vue3-app-volume:
